@@ -41,8 +41,8 @@ $(function($) {
             editable = $(editable);
             // Position the editable area's edit link.
             var link = editable.next('.editable-link');
-            link.css({top: editable.offset().top,
-                left: editable.offset().left - link.width() - 12});
+            link.css({top: editable.position().top,
+                left: editable.position().left - link.width() - 12});
             // Apply the editable area's overlay handler.
             var expose = {color: '#333', loadSpeed: 200, opacity: 0.9};
             var overlay = {expose: expose, closeOnClick: true, close: ':button'};
@@ -50,7 +50,7 @@ $(function($) {
             // Position the editable area's highlight.
             link.next('.editable-highlight').css({
                 width: editable.width(), height: editable.height(),
-                top: editable.offset().top, left: editable.offset().left
+                top: editable.position().top, left: editable.position().left
             });
         });
     };
